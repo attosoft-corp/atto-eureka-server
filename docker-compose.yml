@@ -1,7 +1,7 @@
 # Docker compose to build and run the eureka service
 version: '3'
 services:
-  eureka-server.common.svc:
+  atto-eureka-server.common.svc:
     build:
       context: .
       dockerfile: Dockerfile
