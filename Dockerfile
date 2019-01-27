@@ -17,10 +17,10 @@ ARG VERSION=0.0.1
 VOLUME /tmp
 
 # Add the service as app.jar
-ADD target/eureka-server-${VERSION}-SNAPSHOT.war app.war
+ADD target/eureka-server-${VERSION}-SNAPSHOT.jar app.jar
 
 # touch the archive for timestamp
-RUN sh -c 'touch /app.war'
+RUN sh -c 'touch /app.jar'
 
 # entrypoint to the image on run
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.war"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
