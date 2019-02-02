@@ -1,6 +1,9 @@
 spring:
   application:
-    name: atto-eureka-server
+    name: atto-eureka-server.common.svc
+  cloud:
+    config:
+     uri: http://atto-config-server.common.svc:8080
 
 server:
   port: 8080
